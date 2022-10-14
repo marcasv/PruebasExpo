@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Esta es una app de pruebas sobre React-Native con Expo.</Text>
+      <Image style={styles.images} source={{uri:"https://picsum.photos/300/300"}}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -17,4 +18,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  images: {
+    height: 300,
+    width: 300,
+    borderRadius: 150,
+    margin: 100,
+  }
 });
