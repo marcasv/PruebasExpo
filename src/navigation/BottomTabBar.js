@@ -1,8 +1,8 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Home } from '../views/Home';
-import { SecondView } from '../views/SecondView';
-import { ThirdView } from '../views/ThirdView';
+import { SecondView } from '../views/Updates';
+import { ThirdView } from '../views/Profile';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
@@ -14,6 +14,7 @@ export const BottomTab = () => {
                 name = "Home" 
                 component={Home}
                 options={{
+                    headerShown: false,
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
                       <MaterialCommunityIcons name="home" color={color} size={size} />
@@ -21,7 +22,7 @@ export const BottomTab = () => {
                 }}
             />
             <Tab.Screen 
-                name = "Second" 
+                name = "Updates" 
                 component={SecondView}
                 options={{
                     tabBarLabel: 'Updates',
@@ -31,9 +32,10 @@ export const BottomTab = () => {
                 }}
             />
             <Tab.Screen 
-                name = "Third" 
+                name = "Profile" 
                 component={ThirdView}
                 options={{
+                    headerShown: false,
                     tabBarLabel: 'Profile',
                     tabBarIcon: ({ color, size }) => (
                       <MaterialCommunityIcons name="account" color={color} size={size} />

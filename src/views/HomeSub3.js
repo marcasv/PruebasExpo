@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image } from 'react-native'
 
-export const ThirdView = () => {
+export const HomeSub3 = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Text>Esta es la vista Third de la app de pruebas de React Native con Expo.</Text>
+            <Text>Esta es la subvista 3 de Home.</Text>
             <Image style={styles.images} source={{uri:"https://picsum.photos/500/500"}}/>
         </View>
     );
@@ -23,4 +23,4 @@ const styles = StyleSheet.create({
       borderRadius: 50,
       margin: 100,
     }
-  });
+});
